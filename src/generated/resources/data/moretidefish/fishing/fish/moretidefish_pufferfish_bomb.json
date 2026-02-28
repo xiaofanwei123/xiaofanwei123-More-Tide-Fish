@@ -1,0 +1,48 @@
+{
+  "bucket": "tide:moretidefish_pufferfish_bomb_bucket",
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    },
+    {
+      "type": "tide:saltwater"
+    },
+    {
+      "type": "tide:above",
+      "y": 40
+    }
+  ],
+  "display_data": {
+    "entity": "tide:moretidefish_pufferfish_bomb",
+    "x": 0.05,
+    "z": -0.1
+  },
+  "fish": "tide:moretidefish_pufferfish_bomb",
+  "journal_profile": {
+    "description": "journal.description.tide.moretidefish_pufferfish_bomb",
+    "group": "saltwater",
+    "location": "journal.info.location.deep_ocean",
+    "rarity": "uncommon"
+  },
+  "modifiers": [
+    {
+      "type": "tide:temperature",
+      "preferred_temperature": 1.0,
+      "temperature_tolerance": 0.8
+    }
+  ],
+  "selection_weight": 25.0,
+  "size": {
+    "record_high_cm": 75.0,
+    "typical_high_cm": 22.0,
+    "typical_low_cm": 12.0
+  },
+  "strength": 0.6
+}

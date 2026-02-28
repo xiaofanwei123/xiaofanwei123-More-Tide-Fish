@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "use_name_tag_on_named_entity": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:name_tag",
+          "predicates": {
+            "components": {
+              "minecraft:custom_name": "patrick star"
+            }
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "tide:moretidefish_pink_starfish"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.tide.release_pupfish.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "tide:moretidefish_pink_starfish"
+    },
+    "title": {
+      "translate": "advancements.tide.moretidefish_pink_starfish.title"
+    }
+  },
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tide:item/moretidefish_electric_eel_bucket"
+  }
+}
