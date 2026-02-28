@@ -1,0 +1,6 @@
+// 1.21.1	2026-02-28T20:57:56.3378992	moretidefish Item Tags
+bcbef46d6daaa39c3682a31dd2998abd2fd8c835 data/minecraft/tags/item/head_armor.json
+2e0ec75c5e2b2008db95928eb5ccb0bdabc09ab2 data/moretidefish/tags/item/moretidefish.json
+4df7929c37367063778ed65eeb6033ad51a782a7 data/tide/tags/item/cookable_fish.json
+4df7929c37367063778ed65eeb6033ad51a782a7 data/tide/tags/item/fish.json
+1333921ccc4b000864181ed792dafba81290c173 data/tide/tags/item/legendary_fish.json

@@ -1,0 +1,49 @@
+{
+  "behavior": "darts",
+  "bucket": "tide:moretidefish_lantern_fish_bucket",
+  "conditions": [
+    {
+      "type": "tide:found_in",
+      "biomes": [
+        "#minecraft:is_deep_ocean"
+      ]
+    },
+    {
+      "type": "tide:saltwater"
+    },
+    {
+      "type": "tide:depth_range",
+      "max_y": 40,
+      "min_y": -20
+    },
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    }
+  ],
+  "display_data": {
+    "entity": "tide:moretidefish_lantern_fish",
+    "x": -0.1,
+    "y": -0.05
+  },
+  "fish": "tide:moretidefish_lantern_fish",
+  "journal_profile": {
+    "description": "journal.description.tide.moretidefish_lantern_fish",
+    "group": "saltwater",
+    "location": "journal.info.location.deep_ocean",
+    "rarity": "rare"
+  },
+  "selection_weight": 30.0,
+  "size": {
+    "record_high_cm": 75.0,
+    "typical_high_cm": 35.0,
+    "typical_low_cm": 20.0
+  },
+  "strength": 0.75
+}

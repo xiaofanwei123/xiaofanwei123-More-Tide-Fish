@@ -1,0 +1,57 @@
+{
+  "behavior": "jitter",
+  "bucket": "tide:moretidefish_electric_eel_bucket",
+  "conditions": [
+    {
+      "type": "tide:found_in_structures",
+      "structures": [
+        "minecraft:monument"
+      ]
+    },
+    {
+      "type": "tide:found_in",
+      "biomes": [
+        "#minecraft:is_deep_ocean"
+      ]
+    },
+    {
+      "type": "tide:saltwater"
+    },
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    },
+    {
+      "type": "tide:above",
+      "y": 40
+    }
+  ],
+  "display_data": {
+    "entity": "tide:moretidefish_electric_eel",
+    "shape": "2x1",
+    "x": -0.05,
+    "y": -0.15
+  },
+  "fish": "tide:moretidefish_electric_eel",
+  "journal_profile": {
+    "description": "journal.description.tide.moretidefish_electric_eel",
+    "group": "saltwater",
+    "location": "journal.info.location.deep_ocean",
+    "rarity": "legendary"
+  },
+  "selection_quality": 0.5,
+  "selection_weight": 3.0,
+  "size": {
+    "record_high_cm": 400.0,
+    "typical_high_cm": 375.0,
+    "typical_low_cm": 350.0
+  },
+  "speed": 2.0,
+  "strength": 0.8
+}

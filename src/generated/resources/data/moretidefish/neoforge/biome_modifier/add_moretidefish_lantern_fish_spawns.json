@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#minecraft:is_ocean",
+  "spawners": {
+    "type": "tide:moretidefish_lantern_fish",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 4
+  }
+}

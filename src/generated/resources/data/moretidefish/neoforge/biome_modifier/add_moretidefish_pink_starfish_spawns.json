@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#minecraft:is_ocean",
+  "spawners": {
+    "type": "tide:moretidefish_pink_starfish",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 5
+  }
+}
