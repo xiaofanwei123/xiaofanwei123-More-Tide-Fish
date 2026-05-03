@@ -15,6 +15,6 @@ public class FishFinderItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext context, List<Component> lines, TooltipFlag pIsAdvanced) {
         super.appendHoverText(pStack, context, lines, pIsAdvanced);
-        lines.add(Component.translatable("tooltip.moretidefish.fish_finder_tooltip"));
+        lines.add(Component.translatable("tooltip.moretidefish.fish_finder_tooltip").withStyle(ChatFormatting.GRAY));
     }
 }

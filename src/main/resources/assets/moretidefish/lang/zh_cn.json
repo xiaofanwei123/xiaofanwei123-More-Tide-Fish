@@ -27,6 +27,7 @@
   "journal.description.tide.moretidefish_pink_starfish": "粉红海星是深海中的珍稀生物，他们拥有粉红色的外表，非常可爱。",
   "journal.description.tide.moretidefish_reaver_shark": "掠食鲨是深海中的鲨鱼，他头上的角无比坚硬。",
   "journal.description.tide.moretidefish_pufferfish_bomb": "河豚炸弹鱼是深海中的危险生物，他们拥有水下爆炸的威力，不要激怒他们。",
+  "item.moretidefish.fish_finder": "探鱼器",
   "commands.fishing.no_fish_finder": "你必须抛竿后才能使用探鱼器。",
   "tooltip.moretidefish.fish_finder_tooltip": "将探鱼器放在另一只手并抛竿后，按下左shift来探测可能钓出的鱼。"
 }
