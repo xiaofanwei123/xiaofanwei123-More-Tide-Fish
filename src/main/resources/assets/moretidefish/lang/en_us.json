@@ -29,6 +29,7 @@
   "journal.description.tide.moretidefish_pufferfish_bomb": "Pufferfish Bomb Fish are dangerous creatures in the deep sea, they have underwater explosion power, don't anger them.",
   "item.moretidefish.fish_finder":"Fish Finder",
   "commands.fishing.no_fish_finder": "You must cast a fishing rod to use Fish Finder",
-  "tooltip.moretidefish.fish_finder_tooltip": "After placing the fish finder in the other hand and casting the rod, press the left shift to detect potential fish catches"
+  "tooltip.moretidefish.fish_finder_tooltip": "After placing the fish finder in the other hand and casting the rod, press the left shift to detect potential fish catches",
+  "item.moretidefish.pufferfish_bomb.tooltip": "Right-click to launch the Bomb Fish. Shift + right-click to eat? Not a good idea..."
 
 }

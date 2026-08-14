@@ -18,9 +18,9 @@ public class PufferfishBombEntityRender extends FishRenderer<PufferfishBombBigMo
 
     private static final ResourceLocation DEFAULT_TEXTURE = Tide.resource("textures/entity/fish/moretidefish_pufferfish_bomb.png");
     private int puffStateO = 3;
-    private final FishModel small; ;
+    private final FishModel small;
     private final FishModel mid;
-    private final FishModel big= this.getModel();
+    private final FishModel big = this.getModel();
 
     public PufferfishBombEntityRender(String key, FishModel model, EntityRendererProvider.Context context) {
         super(key, new PufferfishBombBigModel(context), context);
@@ -50,14 +50,15 @@ public class PufferfishBombEntityRender extends FishRenderer<PufferfishBombBigMo
         this.puffStateO = puffState;
         this.shadowRadius = 0.1F + 0.1F * (float) puffState;
 
-        if (puffState == 2) {
+        //第四阶段
+        if (puffState == 3) { //STATE_BOOM
             int fuse = bomb.getFuse();
             float fuseTime = (float) fuse - partialTicks;
 
             if (fuseTime + 1.0F < 15.0F) {
                 float f = 1.0F - (fuseTime + 1.0F) / 10.0F;
                 f = Mth.clamp(f, 0.0F, 1.0F);
-                f = f * f * f * f; //f^4 曲线
+                f = f * f * f * f;
                 float scale = 1.0F + f * 0.3F;
                 poseStack.scale(scale, scale, scale);
             }
@@ -70,7 +71,8 @@ public class PufferfishBombEntityRender extends FishRenderer<PufferfishBombBigMo
     protected float getWhiteOverlayProgress(Mob entity, float partialTicks) {
         PufferfishBomb bomb = (PufferfishBomb) entity;
 
-        if (bomb.getPuffState() == 2) {
+        //闪烁效果仅在第四阶段生效
+        if (bomb.getPuffState() == 3) { // STATE_BOOM
             int fuse = bomb.getFuse();
             if (fuse % 5 == 0) {
                 return 1.0F;

@@ -23,6 +23,27 @@ repositories {
         name = "Illusive Soulworks maven"
         url = "https://maven.theillusivec4.top/"
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Gegy (LambDynamicLights)'
+                url = 'https://maven.gegy.dev'
+                metadataSources { artifact() }
+            }
+        }
+        filter { includeGroup 'dev.lambdaurora.lambdynamiclights' }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 base {
@@ -89,12 +110,16 @@ dependencies {
     //Cloth Config
     implementation "curse.maven:cloth-config-348521:5729127"
     //Tide
-    implementation "curse.maven:tide-884685:7586281"
+    implementation "curse.maven:tide-884685:8570111"
     //Geckolib
     implementation "curse.maven:geckolib-388172:7415496"
-    //Dynamic Lights
-    implementation "curse.maven:dynamiclights-reforged-551736:6044477"
-
+    //LDL
+    compileOnly 'dev.lambdaurora.lambdynamiclights:lambdynamiclights-api:4.8.8+1.21.1:mojmap@jar'
+    compileOnly('dev.yumi.mc.core:yumi-mc-foundation:1.0.0-alpha.16+1.21.1:mojmap@jar') { transitive = false }
+    compileOnly('dev.yumi.commons:yumi-commons-event:1.0.0-alpha.12')          { transitive = false }
+    compileOnly('dev.yumi.commons:yumi-commons-collections:1.0.0-alpha.12')    { transitive = false }
+    compileOnly('dev.yumi.commons:yumi-commons-core:1.0.0-alpha.12')           { transitive = false }
+    runtimeOnly "maven.modrinth:lambdynamiclights:4.8.8+1.21.1"
     //Free Cam
     implementation "curse.maven:free-cam-557076:5572364"
     //Hidden Names

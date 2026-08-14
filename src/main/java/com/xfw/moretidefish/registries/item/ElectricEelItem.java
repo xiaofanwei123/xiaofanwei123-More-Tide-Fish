@@ -18,6 +18,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
@@ -27,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 public class ElectricEelItem extends TieredItem {
 
     public ElectricEelItem(Properties properties) {
-        super(Tiers.IRON,properties.stacksTo(1).component(DataComponents.ATTRIBUTE_MODIFIERS,createAttributes(4.0f)));
+        super(Tiers.IRON,properties.stacksTo(1).rarity(Rarity.EPIC).component(DataComponents.ATTRIBUTE_MODIFIERS,createAttributes(4.0f)));
     }
 
     public static ItemAttributeModifiers createAttributes(float damage) {
@@ -62,7 +63,7 @@ public class ElectricEelItem extends TieredItem {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity livingEntity) {
         ItemStack itemStack = super.finishUsingItem(stack, level, livingEntity);
-        livingEntity.addEffect(new MobEffectInstance(MTFMobEffectRegistry.ELECTRIFIED, 60, 0, false, false));
+        livingEntity.addEffect(new MobEffectInstance(MTFMobEffectRegistry.ELECTRIFIED, 600, 3, false, false));
         return itemStack;
     }
 

@@ -1,6 +1,6 @@
 package com.xfw.moretidefish.registries.entities;
 
-import com.li64.tide.registries.entities.fish.AbstractTideFish;
+import com.li64.tide.registries.entities.fish.SmoothSwimmingFish;
 import com.xfw.moretidefish.registries.MTFMobEffectRegistry;
 import com.xfw.moretidefish.registries.particles.ZapParticleOption;
 import com.xfw.moretidefish.registries.MTFSoundRegistry;
@@ -19,7 +19,7 @@ import net.minecraft.world.phys.Vec3;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class ElectricEel extends AbstractTideFish {
+public class ElectricEel extends SmoothSwimmingFish {
     public ElectricEel(EntityType<? extends ElectricEel> entityType, Level level) {
         super(entityType, level);
     }

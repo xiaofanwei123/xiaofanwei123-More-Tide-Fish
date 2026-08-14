@@ -25,6 +25,8 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.levelgen.structure.BuiltinStructures;
 
+import java.util.List;
+
 public class MTFRegistry {
 
     public static final Item LANTERN_FISH = new TideFish.Builder("moretidefish_lantern_fish")
@@ -36,7 +38,7 @@ public class MTFRegistry {
                 .strength(0.75f)
                 .speed(1f)
                 .behavior(MinigameBehavior.DARTS)
-                .foundIn(BiomeTags.IS_DEEP_OCEAN)
+                .inBiomes(List.of(BiomeTags.IS_DEEP_OCEAN))
                 .saltwater()
                 .selectionWeight(30)
                 .elevationRange(-20, 40)
@@ -68,7 +70,7 @@ public class MTFRegistry {
                     .speed(2.0f)
                     .selectionWeight(1.5)
                     .selectionQuality(0.5)
-                    .foundIn(BiomeTags.IS_DEEP_OCEAN)
+                    .inBiomes(List.of(BiomeTags.IS_DEEP_OCEAN))
                     .saltwater()
                     .overworld()
                     .water()
@@ -103,7 +105,7 @@ public class MTFRegistry {
                 .selectionWeight(3)
                 .selectionQuality(0.5)
                 .temperature(0.35f, 0.2f)
-                .foundIn(BiomeTags.IS_DEEP_OCEAN)
+                .inBiomes(List.of(BiomeTags.IS_DEEP_OCEAN))
                 .saltwater()
                 .overworld()
                 .water()
@@ -172,7 +174,7 @@ public class MTFRegistry {
                     .selectionWeight(3)
                     .selectionQuality(0.5)
                     .inStructure(BuiltinStructures.OCEAN_MONUMENT)
-                    .foundIn(BiomeTags.IS_DEEP_OCEAN)
+                    .inBiomes(List.of(BiomeTags.IS_DEEP_OCEAN))
                     .saltwater()
                     .overworld()
                     .water()

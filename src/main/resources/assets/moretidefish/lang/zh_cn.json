@@ -29,5 +29,6 @@
   "journal.description.tide.moretidefish_pufferfish_bomb": "河豚炸弹鱼是深海中的危险生物，他们拥有水下爆炸的威力，不要激怒他们。",
   "item.moretidefish.fish_finder": "探鱼器",
   "commands.fishing.no_fish_finder": "你必须抛竿后才能使用探鱼器。",
-  "tooltip.moretidefish.fish_finder_tooltip": "将探鱼器放在另一只手并抛竿后，按下左shift来探测可能钓出的鱼。"
+  "tooltip.moretidefish.fish_finder_tooltip": "将探鱼器放在另一只手并抛竿后，按下左shift来探测可能钓出的鱼。",
+  "item.moretidefish.pufferfish_bomb.tooltip": "右键投掷出炸弹鱼。Shift + 右键食用? 看起来不太美味..."
 }

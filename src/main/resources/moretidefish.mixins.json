@@ -14,7 +14,6 @@
   },
   "minVersion": "0.8",
   "client": [
-    "DynamicLightHandlersMixin",
     "ItemRendererMixin"
   ]
 }

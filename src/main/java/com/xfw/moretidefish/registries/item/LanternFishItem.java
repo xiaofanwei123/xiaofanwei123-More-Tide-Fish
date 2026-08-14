@@ -10,9 +10,7 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
@@ -34,7 +32,7 @@ import javax.annotation.Nullable;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class LanternFishItem extends ArmorItem implements GeoItem {
+public class LanternFishItem extends ArmorItem implements GeoItem{
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
     private final Supplier<ItemAttributeModifiers> itemAttributeModifiersSupplier;
 
@@ -102,5 +100,4 @@ public class LanternFishItem extends ArmorItem implements GeoItem {
     public GeoArmorRenderer<?> supplyRenderer() {
         return new LanternFishHelmetRender(new LanternFishHelmetModel());
     }
-
 }

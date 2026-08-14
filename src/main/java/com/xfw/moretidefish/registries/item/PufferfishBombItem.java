@@ -4,6 +4,8 @@ import com.li64.tide.registries.TideEntityTypes;
 import com.xfw.moretidefish.misc.WaterIgnoringDamageCalculator;
 import com.xfw.moretidefish.registries.MTFParticleRegistry;
 import com.xfw.moretidefish.registries.entities.PufferfishBomb;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -13,9 +15,16 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.ExplosionDamageCalculator;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+
+import java.awt.*;
+import java.util.List;
+
+import static com.xfw.moretidefish.registries.entities.PufferfishBomb.BOOM_DELAY;
+import static com.xfw.moretidefish.registries.entities.PufferfishBomb.TOTAL_TIME_TO_BOOM;
 
 public class PufferfishBombItem extends Item {
     public PufferfishBombItem(Properties properties) {
@@ -33,13 +42,15 @@ public class PufferfishBombItem extends Item {
             bomb.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
             bomb.setYRot(player.getYRot());
             bomb.setDeltaMovement(look.x * 1.5, look.y * 1.5, look.z * 1.5);
-            bomb.setPuffState(2);
-            bomb.setInflateCounter(player.getRandom().nextBoolean() ? 19 : 20);
+
+            bomb.setPuffState(PufferfishBomb.STATE_BOOM);
+            bomb.setInflateCounter(TOTAL_TIME_TO_BOOM - BOOM_DELAY + 1); //140-40,还有40tick爆炸
             level.addFreshEntity(bomb);
             if (!player.isCreative()) {
                 itemstack.shrink(1);
             }
-            level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.PLAYERS, 1F, 1F);
+            level.playSound(null, player.getX(), player.getY(), player.getZ(),
+                    SoundEvents.SNOWBALL_THROW, SoundSource.PLAYERS, 1F, 1F);
         } else {
             player.startUsingItem(usedHand);
         }
@@ -63,4 +74,8 @@ public class PufferfishBombItem extends Item {
         return eatTime*5;
     }
 
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("item.moretidefish.pufferfish_bomb.tooltip").withStyle(ChatFormatting.GRAY));
+    }
 }
