@@ -1,6 +1,7 @@
 package com.xfw.moretidefish.registries.item;
 
 import com.li64.tide.registries.TideEntityTypes;
+import com.li64.tide.registries.items.AbstractTooltipItem;
 import com.xfw.moretidefish.misc.WaterIgnoringDamageCalculator;
 import com.xfw.moretidefish.registries.MTFParticleRegistry;
 import com.xfw.moretidefish.registries.entities.PufferfishBomb;
@@ -22,11 +23,12 @@ import net.minecraft.world.phys.Vec3;
 
 import java.awt.*;
 import java.util.List;
+import java.util.function.Consumer;
 
 import static com.xfw.moretidefish.registries.entities.PufferfishBomb.BOOM_DELAY;
 import static com.xfw.moretidefish.registries.entities.PufferfishBomb.TOTAL_TIME_TO_BOOM;
 
-public class PufferfishBombItem extends Item {
+public class PufferfishBombItem extends AbstractTooltipItem {
     public PufferfishBombItem(Properties properties) {
         super(properties.stacksTo(16));
     }
@@ -75,7 +77,7 @@ public class PufferfishBombItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.translatable("item.moretidefish.pufferfish_bomb.tooltip").withStyle(ChatFormatting.GRAY));
+    public void addTooltip(ItemStack itemStack, Consumer<Component> consumer) {
+        consumer.accept(Component.translatable("item.moretidefish.pufferfish_bomb.tooltip").withStyle(ChatFormatting.GRAY));
     }
 }

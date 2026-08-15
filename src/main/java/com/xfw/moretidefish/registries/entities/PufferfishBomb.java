@@ -122,7 +122,6 @@ public class PufferfishBomb extends SmoothSwimmingFish {
                             this.level().playSound(null, this.getX(), this.getY(), this.getZ(), SoundEvents.TNT_PRIMED, SoundSource.BLOCKS, 1.0F, 1.0F);
                             //进入第四阶段，爆炸倒计时
                             this.setPuffState(STATE_BOOM);
-                            //ParticleTypes.EXPLOSION_EMITTER
                             this.makeSound(SoundEvents.TNT_PRIMED);
                         } else {
                             //条件不满足，开始收缩
