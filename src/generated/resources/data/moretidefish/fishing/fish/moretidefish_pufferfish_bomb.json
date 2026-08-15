@@ -8,15 +8,22 @@
       ]
     },
     {
+      "type": "tide:found_in",
+      "biomes": [
+        "#minecraft:is_deep_ocean"
+      ]
+    },
+    {
+      "type": "tide:depth_range",
+      "max_y": 40,
+      "min_y": -20
+    },
+    {
       "type": "tide:fluid",
       "fluid": "water"
     },
     {
       "type": "tide:saltwater"
-    },
-    {
-      "type": "tide:above",
-      "y": 40
     }
   ],
   "display_data": {

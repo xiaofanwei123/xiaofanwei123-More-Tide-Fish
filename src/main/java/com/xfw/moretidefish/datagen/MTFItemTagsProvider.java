@@ -4,6 +4,7 @@ import com.li64.tide.Tide;
 import com.li64.tide.data.TideTags;
 import com.li64.tide.registries.TideFish;
 import com.xfw.moretidefish.misc.MTFTags;
+import com.xfw.moretidefish.registries.MTFItemRegistry;
 import com.xfw.moretidefish.registries.MTFRegistry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -59,6 +60,7 @@ public class MTFItemTagsProvider extends ItemTagsProvider {
 
 
         // ========== 钓鱼装备相关 ==========
+        tag(TideTags.Items.INFORMATIONAL).add(MTFItemRegistry.ADVANCED_FISH_FINDER.get());
         //鱼竿
 //        tag(TideTags.Items.FISHING_RODS)
 //                .add(Items.FISHING_ROD,

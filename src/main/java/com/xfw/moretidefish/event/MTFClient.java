@@ -1,11 +1,7 @@
 package com.xfw.moretidefish.event;
 
-import com.li64.tide.Tide;
+
 import com.li64.tide.data.TideTags;
-import com.li64.tide.data.commands.TestType;
-import com.li64.tide.data.fishing.selector.FishingEntry;
-import com.li64.tide.registries.entities.misc.fishing.HookAccessor;
-import com.li64.tide.registries.entities.misc.fishing.TideFishingHook;
 import com.xfw.moretidefish.MoreTideFish;
 import com.xfw.moretidefish.networking.FishFinderPayload;
 import com.xfw.moretidefish.registries.MTFItemRegistry;
@@ -14,10 +10,7 @@ import com.xfw.moretidefish.registries.MTFParticleRegistry;
 import com.xfw.moretidefish.registries.particles.AirBubbleParticle;
 import com.xfw.moretidefish.registries.particles.SparkParticle;
 import com.xfw.moretidefish.registries.particles.ZapParticle;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.api.distmarker.Dist;
@@ -27,10 +20,6 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
-
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
 
 import static org.lwjgl.glfw.GLFW.GLFW_PRESS;
 
@@ -69,9 +58,9 @@ public class MTFClient {
         Player player = mc.player;
         if (player != null && mc.screen == null && mc.options.keyShift.matches(event.getKey(), event.getScanCode()) &&
                 (
-                    (player.getOffhandItem().is(MTFItemRegistry.FISH_FINDER) && player.getMainHandItem().is(TideTags.Items.FISHING_RODS))
+                    (player.getOffhandItem().is(MTFItemRegistry.ADVANCED_FISH_FINDER) && player.getMainHandItem().is(TideTags.Items.FISHING_RODS))
                     ||
-                    (player.getMainHandItem().is(MTFItemRegistry.FISH_FINDER) && player.getOffhandItem().is(TideTags.Items.FISHING_RODS))
+                    (player.getMainHandItem().is(MTFItemRegistry.ADVANCED_FISH_FINDER) && player.getOffhandItem().is(TideTags.Items.FISHING_RODS))
                 )
         )
         {

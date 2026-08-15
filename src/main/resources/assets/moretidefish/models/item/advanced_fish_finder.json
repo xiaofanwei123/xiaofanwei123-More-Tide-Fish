@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "moretidefish:item/fish_finder"
+		"layer0": "moretidefish:item/advanced_fish_finder"
 	}
 }

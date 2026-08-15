@@ -1,4 +1,5 @@
 {
+  "parent": "tide:root",
   "criteria": {
     "use_name_tag_on_named_entity": {
       "trigger": "minecraft:player_interacted_with_entity",
@@ -25,10 +26,8 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.tide.release_pupfish.description"
+      "translate": "advancements.moretidefish.pink_starfish.description"
     },
-    "frame": "challenge",
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "tide:moretidefish_pink_starfish"

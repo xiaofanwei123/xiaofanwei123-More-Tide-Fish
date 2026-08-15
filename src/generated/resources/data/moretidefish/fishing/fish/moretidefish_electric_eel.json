@@ -28,8 +28,9 @@
       "fluid": "water"
     },
     {
-      "type": "tide:above",
-      "y": 40
+      "type": "tide:depth_range",
+      "max_y": 40,
+      "min_y": -20
     }
   ],
   "display_data": {

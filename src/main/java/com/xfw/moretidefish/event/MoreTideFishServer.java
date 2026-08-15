@@ -22,7 +22,7 @@ public class MoreTideFishServer {
     @SubscribeEvent
     public static void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES ) {
-            event.accept(MTFItemRegistry.FISH_FINDER.get());
+            event.accept(MTFItemRegistry.ADVANCED_FISH_FINDER.get());
         }
     }
 }

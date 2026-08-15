@@ -84,5 +84,12 @@ versionRange = "[3.0.0,)"
 ordering = "AFTER"
 side = "CLIENT"
 
+[[dependencies.${mod_id}]]
+modId = "geckolib"
+type = "required"
+versionRange = "[4.8.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
 [modproperties.moretidefish]
 "yumi:entrypoints"."lambdynlights:initializer" = ["com.xfw.moretidefish.registries.LanternFishLdlInit"]
